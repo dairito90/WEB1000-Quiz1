@@ -1,0 +1,85 @@
+1-An angular directive is:
+
+A way to define a custom element or attribute.
+
+
+
+2-Write the JavaScript code necessary to create a controller named "PageController" which prints the string "hello world"
+as soon as the page loads and the controller runs.
+
+angular.module('HelloWorldApp', [])
+  .controller('PageController', function($scope) {
+      $scope.display = "Hello World";
+});
+
+
+3-Given the following angular module declaration:
+
+var app = angular.module("CookiesApp", ['ngRoute', 'ngAnimate']);
+
+How do you bind this angular module to a particular portion of your html page (for instance the body tag)?
+
+<div ng-app="CookiesApp"></div>
+
+
+
+
+4-Write a recursive function which receives an array and returns the sum of the elements of the array.
+     function arraySum(arr){
+   if(arr.length === 0) return arr[0];
+return arr[0] + arraySum(arr.slice(1));
+
+}
+
+5-Given two temperatures, return true if one is less than 0 and the other is greater than 100.
+a.	icyHot(120, -1) → true
+b.	icyHot(-1, 120) → true
+c.	icyHot(2, 120) → false
+
+
+         function icyHot(arr){
+            for(i=0; i < arr.length-1;i++)
+            if (1 < 0)
+            return true;
+            else return false;
+
+         }
+
+
+
+
+6-Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
+a.	makes10(9, 10) → true
+b.	makes10(9, 9) → false
+c.	makes10(1, 9) → true
+
+
+function makes10(a, b){
+      if (a === 10 || b === 10 || (a + b) === 10){
+      return true;
+            } else {
+                return false;
+            }
+        }
+
+
+
+7-Given a string, take the first 2 chars and return the string with the 2 chars added at both the front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever chars are there.
+a.	front22("kitten") → "kikittenki"
+b.	front22("Ha") → "HaHaHa"
+c.	front22("abc") → "ababcab"
+
+
+
+
+
+function front22(str,index,count,add){
+if (index < 0) {
+   index = str.length + index;
+   if (index < 0) {
+     index = 0;
+   }
+ }
+
+ return str.slice(0, index) + (add || "") + str.slice(index + count);
+}
